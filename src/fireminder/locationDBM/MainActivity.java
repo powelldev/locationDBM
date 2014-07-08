@@ -1,15 +1,16 @@
 package fireminder.locationDBM;
 
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.BroadcastReceiver;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 
 public class MainActivity extends Activity {
 
@@ -50,6 +51,22 @@ public class MainActivity extends Activity {
 	public static class PlaceholderFragment extends Fragment {
 
 		public PlaceholderFragment() {
+		}
+
+		MyBroadcastReceiver receiver = new MyBroadcastReceiver();
+		@Override
+		public void onResume() {
+			super.onResume();
+			IntentFilter filter = new IntentFilter("android.provider.Telephony.SMS_RECEIVED");
+			getActivity().registerReceiver(receiver, filter);
+			SmsManager smsManager = SmsManager.getDefault();
+			smsManager.sendTextMessage("19258134932", "19258134932", "How far are you from Antioch?", null, null);
+			
+		}
+		@Override
+		public void onDestroy() {
+			getActivity().unregisterReceiver(receiver);
+			
 		}
 
 		@Override
