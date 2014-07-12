@@ -2,15 +2,16 @@ package fireminder.locationDBM;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.BroadcastReceiver;
-import android.content.IntentFilter;
 import android.os.Bundle;
-import android.telephony.SmsManager;
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import fireminder.google.distancematrix.DistanceMatrixRequest;
+import fireminder.google.distancematrix.DistanceMatrixResponse;
 
 public class MainActivity extends Activity {
 
@@ -54,19 +55,37 @@ public class MainActivity extends Activity {
 		}
 
 		MyBroadcastReceiver receiver = new MyBroadcastReceiver();
+
 		@Override
 		public void onResume() {
 			super.onResume();
-			IntentFilter filter = new IntentFilter("android.provider.Telephony.SMS_RECEIVED");
-			getActivity().registerReceiver(receiver, filter);
-			SmsManager smsManager = SmsManager.getDefault();
-			smsManager.sendTextMessage("19258134932", "19258134932", "How far are you from Antioch?", null, null);
-			
+			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+					.permitAll().build();
+			StrictMode.setThreadPolicy(policy);
+			try {
+				DistanceMatrixRequest.Builder builder = new DistanceMatrixRequest.Builder();
+				builder.setOrigin("CSUEB");
+				builder.setDestination("UCSB");
+				DistanceMatrixRequest request = new DistanceMatrixRequest(builder);
+				DistanceMatrixResponse response = request.performRequest();
+				Log.e("LOG_TAG", response.toString());
+			} catch (Exception e) {
+				Log.e("LOG_TAG", "Error: " + e.getMessage());
+			}
+			/*
+			 * IntentFilter filter = new
+			 * IntentFilter("android.provider.Telephony.SMS_RECEIVED");
+			 * getActivity().registerReceiver(receiver, filter); SmsManager
+			 * smsManager = SmsManager.getDefault();
+			 * smsManager.sendTextMessage("19258134932", "19258134932",
+			 * "How far are you from Antioch?", null, null);
+			 */
 		}
+
 		@Override
 		public void onDestroy() {
 			getActivity().unregisterReceiver(receiver);
-			
+
 		}
 
 		@Override
