@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/powelldev/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/Users/powelldev/git/locationDbm/app/build/intermediates/pre-dexed/debug/gson-2.3.1-90d5af41d0fac8b023d20af983301dc24d79b341.jar" />
+    </item>
+    <item
+        jar="/Users/powelldev/git/locationDbm/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/powelldev/git/locationDbm/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-d53b60948501e8906e6a411451e85a5994ca3dce.jar" />
+    </item>
+    <item
+        jar="/Users/powelldev/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.9.0/a681c044244d9fc375198588297a39ba78028423/retrofit-1.9.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a681c044244d9fc375198588297a39ba78028423">
+        <dex dex="/Users/powelldev/git/locationDbm/app/build/intermediates/pre-dexed/debug/retrofit-1.9.0-ae7858e39473027fcac36916873ba5f1277e377c.jar" />
+    </item>
+    <item
+        jar="/Users/powelldev/git/locationDbm/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/powelldev/git/locationDbm/app/build/intermediates/pre-dexed/debug/classes-4658e74a7fc97ecd8e9a95051677a34627d895dd.jar" />
+    </item>
+    <item
+        jar="/Users/powelldev/git/locationDbm/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/powelldev/git/locationDbm/app/build/intermediates/pre-dexed/debug/classes-5a76c531fdca09fd90ee3bcc15c1998081d344a3.jar" />
+    </item>
+    <item
+        jar="/Users/powelldev/git/locationDbm/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/powelldev/git/locationDbm/app/build/intermediates/pre-dexed/debug/classes-a1f3e7c449ed5238764c04ad85ad37d2aea21ce1.jar" />
+    </item>
+    <item
+        jar="/Users/powelldev/Tools/android-sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/powelldev/git/locationDbm/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-94c889baff8f27adc84801d0b2b18142c5c5f36a.jar" />
+    </item>
+
+</items>
